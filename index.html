@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background: none;
+            overflow: hidden;
+        }
+        #pet {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            z-index: 10;
+        }
+        .poop {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            background-size: cover;
+            pointer-events: none;
+            z-index: 5;
+            opacity: 1;
+            transition: opacity 1s ease;
+        }
+        .poop.fade-out {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="pet"></div>
+    <div id="poop"></div>
+    <script src="pet.js"></script>
+    <script src="renderer.js"></script>
+    <script src="poop.js"></script> 
+</body>
+</html>
